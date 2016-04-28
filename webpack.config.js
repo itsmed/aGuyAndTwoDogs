@@ -23,26 +23,19 @@ module.exports = {
     loaders: [
       {
         test: /\.js$/,
-        loader: 'babel?presets[]=react,presets[]=es2015',
+        loader: 'babel-loader',
+        query: {
+          presets: ['es2015', 'react']
+        },
         exclude: '/node_modules'
       },
       //This converts our .css into JS
-      { test: /\.css$/, loader: 'style-loader!css-loader' },
-      { test : /\.json$/, loader: 'json-loader'},
-      { test: /\.eot(\?v=\d+\.\d+\.\d+)?$/, loader: 'file' },
-      { test: /\.(woff|woff2)$/, loader:'url?prefix=font/&limit=5000' },
-      { test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/, loader: 'url?limit=10000&mimetype=application/octet-stream' },
-      { test: /\.svg(\?v=\d+\.\d+\.\d+)?$/, loader: 'url?limit=10000&mimetype=image/svg+xml' },
-      {test: /\.(png|jpg)$/, loader: 'url?limit=25000'}
+      {
+        test: /\.css$/,
+        loader: 'css-loader'
+      }
     ]
   },
-
-  resolve: {
-        extensions: ['', '.js', '.jsx', '.css', '.json'],
-        modulesDirectories: [
-          'node_modules'
-        ]        
-    },
   //Since we're running Webpack from our server, need to manually add the
   //Hot Replacement plugin
   plugins: [

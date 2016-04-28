@@ -31,7 +31,6 @@ module.exports = function () {
 
     // Configure hot replacement
     hot: true,
-    historyApiFallback: true,
     quiet: false,
     noInfo: true,
     stats: {

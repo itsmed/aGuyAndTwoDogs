@@ -1,14 +1,12 @@
-import React from 'react';
-import ReactDOM form 'react-dom';
-import { syncHistoryWithStore } from 'react-router-redux';
+import React, { Component } from 'react';
+import { render } from 'react-dom';
 
+class HelloWorld extends Component {
+  render() {
+    return <div>
+      Hello World!
+    </div>
+  }
+}
 
-
-
-
-
-
-ReactDOM.render(
-  <Root history={history} store={store} />,
-    document.getElementById('app')
-)
+render(<HelloWorld/>, document.getElementById('app'));
