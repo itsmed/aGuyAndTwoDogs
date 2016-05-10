@@ -16,7 +16,7 @@ module.exports = {
   output: {
     path: path.join(__dirname, 'public', 'build'),
     filename: 'bundle.js',
-    publicPath: '/build/' //the server will listen in on this path and then proxy Webpack
+    publicPath: './build/' //the server will listen in on this path and then proxy Webpack
   },
 
   module: {
@@ -30,10 +30,8 @@ module.exports = {
         exclude: '/node_modules'
       },
       //This converts our .css into JS
-      {
-        test: /\.css$/,
-        loader: 'css-loader'
-      }
+      { test: /\.scss$/, loader: 'style-loader!css-loader!sass-loader' },
+      {test: /\.(png|jpg)$/, loader: 'file-loader'}
     ]
   },
   //Since we're running Webpack from our server, need to manually add the

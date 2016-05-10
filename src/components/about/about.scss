@@ -27,14 +27,15 @@
 .about-pic-credit {
   position: relative;
   display: block;
-  top: 133px;
-  right: 10px;
+  top: 135px;
+  right: 55px;
   font-size: 10pt;
+  margin: 1%;
 }
 
 .about-content-wrapper {
   position: relative;
-  width: 90%;
+  width: 80%;
   height: 60%;
   background-color: $background-color;
   margin: 15% auto;
@@ -42,5 +43,8 @@
 }
 
 .about-content {
+  position: relative;
   display: block;
+  right: 4%;
+
 }
