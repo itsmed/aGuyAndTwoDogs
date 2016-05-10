@@ -1,0 +1,34 @@
+@import '../../styles.config.scss';
+
+.nav {
+  position: relative;
+  width: 90%;
+  height: 20%;
+  top: 53%;
+  left: 20%;
+}
+
+.nav-list {
+  position: relaive;
+  text-align: justify;
+
+  @include device-size-query(320px) {
+    left: 80%;
+  }
+}
+
+.nav-choices {
+  display: inline-block;
+  width: 150px;
+  margin: 2px;
+  font-size: 28px;
+  list-style: none;
+
+  @include device-size-query(320px) {
+    width: 100%;
+    font-size: 18px;
+    text-align: center;
+    display: block;
+    margin-bottom: 0.25em;
+  }
+}

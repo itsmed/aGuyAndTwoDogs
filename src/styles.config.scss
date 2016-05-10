@@ -1,0 +1,26 @@
+// media widths 
+$small: 240px;
+$mobile-large: 320px;
+$tablet-small: 480px;
+$tablet-large: 768px;
+$screen-small: 1024px;
+$screen-large: 1280px;
+
+// colors
+$background-color: rgba(240, 240, 245, 9);
+
+
+// Media query
+@mixin device-size-query($max-device-width) {
+  @media screen and (max-device-width: $max-device-width) {
+    @content;
+  }
+}
+
+// vertival position
+@mixin vertical-align($position: relative) {
+  position: $position;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);;
+}
