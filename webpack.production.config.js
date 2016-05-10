@@ -9,8 +9,9 @@ var config = {
   devtool: 'source-map',
   entry: './index.js',
   output: {
-    path: buildPath,
-    filename: 'bundle.js'
+    path: path.join(__dirname, 'public', 'build'),
+    filename: 'bundle.js',
+    publicPath: './build/'
   },
   plugins: [
     new webpack.optimize.UglifyJsPlugin({
