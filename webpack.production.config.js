@@ -29,10 +29,9 @@ var config = {
       test: /\.js$/,
       loader: 'babel?presets[]=react,presets[]=es2015',
       exclude: [nodeModulesPath]
-    },{
-      test: /\.css$/,
-      loader: 'style!css'
     },
+    { test: /\.scss$/, loader: 'style-loader!css-loader!sass-loader' },
+      {test: /\.(png|jpg)$/, loader: 'file-loader'},
     { test: require.resolve("jquery"), loader: "imports?jQuery=jquery" },
       { test: /\.eot(\?v=\d+\.\d+\.\d+)?$/, loader: "file" },
       { test: /\.(woff|woff2)$/, loader:"url?prefix=font/&limit=5000" },
