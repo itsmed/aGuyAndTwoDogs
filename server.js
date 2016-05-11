@@ -40,7 +40,7 @@ app.listen(port, function () {
 
 
   //if we're not in production, this proxies requests to localhost:3000 and sends them to our webpack server at localhost:8080
-if (isProduction) {
+if (!isProduction) {
   var bundle = require('./server/compiler.js');
   bundle();
   app.all('/build/*', function (req, res) {
