@@ -40,18 +40,6 @@ app.listen(app.get('port'), function () {
   console.log('Server running on port ' + app.get('port'));
 });
 
-
-  //if we're not in production, this proxies requests to localhost:3000 and sends them to our webpack server at localhost:8080
-// if (!isProduction) {
-//   var bundle = require('./server/compiler.js');
-//   bundle();
-//   app.all('/build/*', function (req, res) {
-//     proxy.web(req, res, {
-//       target: 'http://localhost:8080'
-//     });
-//   });
-// }
-
 proxy.on('error', function(e) {
   console.log('Could not connect to proxy, please try again...', e);
 });
