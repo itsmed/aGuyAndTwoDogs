@@ -1,12 +1,12 @@
 import    React, { Component }    from 'react';
 
-require ('./nav.scss');
+// require ('./nav.scss');
 
 export default class Nav extends Component {
 
   render() {
 
-    return <div className="nav">
+    return <div className="nav col-xs-10 col-xs-offset-1">
       <ul clasName="nav-list">
         <li className="nav-choices">Home</li>
         <li className="nav-choices">About</li>

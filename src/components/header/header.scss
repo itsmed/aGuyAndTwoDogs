@@ -1,10 +1,9 @@
 @import '../../styles.config.scss';
 
-@import '../nav/nav.scss';
+// @import '../nav/nav.scss';
 
 .header-container {
   position: relative;
-  width: 100%;
   height: 300px;
   margin: 25 auto;
   @include device-size-query(#{$small}) {
@@ -14,7 +13,6 @@
 
 .header-background {
   position: relative;
-  width: 100%;
   height: 100%;
   background-image: url('view-from-hovenweep.jpg');
   background-repeat: no-repeat;
@@ -24,47 +22,25 @@
 
 .header {
   position: absolute;
-  width: 100%;
   height: 100%;
-  top: 1%;
+  top: 30%;
   text-align: center;
-  margin-bottom: 3%;
-
-  h1 {
-    @include vertical-align();
-
-    @include device-size-query(#{$tablet-small}) {
-      font-size: 16pt;
-    }
-  }
-
+  margin-left: 38%;
+  margin-right: 32%;
+  margin-bottom: 100px;
 }
 
-.logo {
-  position: absolute;
-  width: 40%;
-  height: 50%;
-  left: -10.65%;
-  background-image: url('cyndi-and-chloe-and-i.jpg');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-  border-style: none;
-  border-radius: 40px;
+.social-container {
+  position: relative;
+  margin-left: 38%;
+  margin-right: 32%;
+  margin-bottom: 100px;  
 }
 
 .social-links {
-  position: relative;
   display: inline-block;
   width: 50px;
-  left: 34%;
   margin: 1% 1% 0 1%;
   color: black;
-
-  @include device-size-query(#{$tablet-small}) {
-    display: block;
-    left: 10%;
-    margin: 3px auto;
-  }
-
 }
+
