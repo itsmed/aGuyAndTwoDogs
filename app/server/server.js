@@ -1,7 +1,8 @@
 var express = require('express');
 var path = require('path');
 var httpProxy = require('http-proxy');
-var publicPath = path.resolve(__dirname, 'public');
+var publicPath = path.resolve(__dirname, '../public');
+
 var isProduction = process.env.NODE_ENV === 'production';
 // var port = isProduction ? process.env.PORT : 3000;
 
@@ -21,7 +22,7 @@ app.use(express.static(publicPath));
 //server/compiler.js runs webpack-dev-server which creates the bundle.js which index.html serves
 //the compiler adds some console logs for some extra sugar
 //notice that you will not see a physical bundle.js because webpack-dev-server runs it from memory
-var bundle = require('./server/compiler.js');
+var bundle = require('./compiler.js');
 bundle();
 
 //express now processes all requests to localhost:8080

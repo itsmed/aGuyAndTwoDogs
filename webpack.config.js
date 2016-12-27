@@ -4,17 +4,17 @@ var webpack = require('webpack');
 module.exports = {
 
   //fastest rebuild and build speed
-  devtool: 'eval', 
+  devtool: 'eval',
   entry: [
     //for hot style updates
     'webpack/hot/dev-server',
     //refreshes the browser when it can't hot update
-    'webpack-dev-server/client?http://localhost:8080', 
+    'webpack-dev-server/client?http://localhost:8080',
     //our entry point
-    './index.js' 
+    './app/src/ClientApp.jsx'
   ],
   output: {
-    path: path.join(__dirname, 'public', 'build'),
+    path: path.join(__dirname, 'app', 'public', 'build'),
     filename: 'bundle.js',
     publicPath: './build/' //the server will listen in on this path and then proxy Webpack
   },
@@ -22,7 +22,7 @@ module.exports = {
   module: {
     loaders: [
       {
-        test: /\.js$/,
+        test: /\.jsx?$/,
         loader: 'babel-loader',
         query: {
           presets: ['es2015', 'react']

@@ -1,6 +1,6 @@
-import React, { Component }         from 'react';
-
-import './about.scss';
+import React, { Component } from 'react';
+import AdminDashboard from '../AdminDashboard/AdminDashboard.jsx';
+import './landing.scss';
 
 export default class About extends Component {
 
@@ -13,6 +13,7 @@ export default class About extends Component {
       </div>
       <div className='about-content-wrapper col-xs-10 col-xs-offset-1'>
         <h2 className='about-content'>About Me</h2>
+        <AdminDashboard />
         <p className='about-content'>I’m a full stack software engineer who works with customers and design teams to build rich user-facing applications. In my spare time I enjoy working on personal as well as open source projects. I like finding new technologies, and am always looking for new tools to increase development efficiency. </p>
         <p className='about-content'>I am passionate about tech, education and civics. My hobbies include working on projects that blend the three together. I also enjoy spending time with my dogs, hiking, and making pie.</p>
       </div>

@@ -1,7 +1,7 @@
-import React, { Component }        from  'react';
+import React, { Component } from  'react';
 
-import Nav                         from  '../nav/Nav';
-
+import Nav from  '../Nav/Nav.jsx';
+import AdminDashboard from '../AdminDashboard/AdminDashboard.jsx'
 import './header.scss';
 
 
@@ -12,7 +12,7 @@ export default class Header extends Component {
     return <div className='header-container col-xs-12'>
       <div className="header-background col-xs-10 col-xs-offset-1"></div>
       <div className='header col-xs-3 col-xs-offset-4'>
-        <h1>A Guy And Two Dogs</h1>
+        <AdminDashboard />
       </div>
       <div className="social-container col-xs-6 col-xs-offset-3">
         <ul>
